@@ -1,5 +1,5 @@
 /* A Naive recursive implementation of LCS problem in java*/
-// contributed by srinidh
+
 public class LongestCommonSubsequence
 {
 
