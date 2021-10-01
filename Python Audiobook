@@ -1,14 +1,14 @@
-import speech_recognition as sr
+import speech_recognition as sr //imported Python Speech Recognition Library
 import pyttsx3
 import pywhatkit
 import datetime
-import wikipedia
-import pyjokes
+import wikipedia //imported wikipedia souces from server
+import pyjokes 
 
-listener = sr.Recognizer()
-engine = pyttsx3.init()
+listener = sr.Recognizer() //input command will be recorded
+engine = pyttsx3.init() 
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[1].id) //voice 1 assigned to the compiler
 
 
 def talk(text):
@@ -16,12 +16,12 @@ def talk(text):
     engine.runAndWait()
 
 
-def take_command():
+def take_command(): //command from the user
     try:
         with sr.Microphone() as source:
-            print('listening...')
-            voice = listener.listen(source)
-            command = listener.recognize_google(voice)
+            print('listening...') // this will display in the outbut box
+            voice = listener.listen(source) // this will be spoken by the compiler in Voice [1]
+            command = listener.recognize_google(voice) // input would be evaluated 
             command = command.lower()
             if 'alexa' in command:
                 command = command.replace('alexa', '')
@@ -32,7 +32,7 @@ def take_command():
 
 
 def run_alexa():
-    command = take_command()
+    command = take_command() //some major input and output commands for user
     print(command)
     if 'play' in command:
         song = command.replace('play', '')
