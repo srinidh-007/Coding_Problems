@@ -22,7 +22,6 @@ language of your choice be it Python, C, C++, Java, HTML, CSS, JavaScript, Node,
 - Take a look at the Existing [Issues](https://github.com/srinidh-007/HackotberFest2021.git) or create your own Prs with any language!
 - Fork the Repo so that you have a local copy then clone it into your PC.
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
-- Add Screenshots to help us know what this is all about.
 
 ## How to make a Pull Request
 
