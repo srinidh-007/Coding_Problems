@@ -1,4 +1,6 @@
 /*
+https://www.codechef.com/CDSP2021/problems/SEPT202
+
 Chef is giving a offer in his new opened bookstore “anyone can take three and pay for the only two more expensive ones”. So, each customer who picks three books 
 gets the cheapest one for free. The customer can take even more books and, depending on the way the books are arranged into groups of three, get the cheapest one 
 in each group for free. For eg,say if the prices of the books taken by the customer be: 2,3,4,5,6,7,8. If he arranges them into the groups (8,3,2), (5,6,4) and (7), 
@@ -37,15 +39,15 @@ int main() {
     for(int i = 0; i < n; i++) {
         int price;
         cin >> price;
-        v.push_back(price);
+        v.push_back(price);                //taking input and storing in vector 
     }
 
-    sort(v.rbegin(), v.rend());
+    sort(v.rbegin(), v.rend());     //sorting the vector
     int cost = 0;
     for(int j = 0; j < v.size(); j++) {
-        if(j % 3 != 2) {
+        if(j % 3 != 2) {                       //checking condition if satisfy operation is performed
             cost += v[j];
         }
     }
-    cout << cost << endl;
+    cout << cost << endl;        //end result
 }
