@@ -1,0 +1,19 @@
+from gtts import gTTS
+import os
+import PyPDF2
+
+book=open('mybook.pdf','r',encoding='utf-8')
+
+pdfReader=PyPDF2.PdfFileReader(book)
+pages=pdfReader.numPages
+print(pages)
+page1=pdfReader.getPage(0)
+mytext=page1.extractText()
+print(mytext)
+language ='en'
+output=gTTS(text=mytext,lang=language,slow=True)
+print("doning")
+book.close()
+output.save("test.mp3")
+os.system("test.mp3")
+print("done")
