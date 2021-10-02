@@ -13,7 +13,7 @@ auth = tweepy.OAuthHandler(consumer_key=api_key,consumer_secret=api_key_secret)
 auth.set_access_token(access_token,access_token_secret)
 
 api = tweepy.API(auth)
-print
+print(api)
 
 def write_Json(data, filename="hashtag.json"):
     with open(filename,"w") as f:
