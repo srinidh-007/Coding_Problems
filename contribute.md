@@ -6,16 +6,16 @@ Please note that this project is released with a [Contributor Code of Conduct](h
 
 # Rules & Regulations 
 
--   This is Beginner Friendly, Kickstart for students and those who are new to opensource 
--   Use any language.
--   Don't spam it will be rejected immediately
--   Python, C, C++, Java, HTML, CSS, JavaScript, Node, Data Structure and Algorithms, Android Projects.
--   Anything valuable for Community
+-Use any language.
+-Don't spam it will be rejected immediately
+-Python, C, C++, Java, Docker, JavaScript, Node, Data Structure and Algorithms, HTML, CSS, WebDev, Android Projects are Encouraged
+-Anything valuable for Community
+-Please check for the file your contributing is already available or not if it is available contribute something new, duplicate content will be -rejected immediately
 
 ## Issues and PRs
 
 This is a beginner friendly repository where all those people who are new to open source can contribute. The unique thing is you can use any
-language of your choice be it Python, C, C++, Java, HTML, CSS, JavaScript, Node, Data Structure and Algorithms, Android Projects which would be considered valuable to the open source community as a whole. Interested? See the #how to contribute.
+language of your choice be it Python, C, C++, Java or useful projects written in HTML, CSS, JavaScript, Node, Data Structure and Algorithms, Android Projects which would be considered valuable to the open source community as a whole. Interested? See the #how to contribute.
 
 ## How to Contribute
 
