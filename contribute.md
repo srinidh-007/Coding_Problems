@@ -2,7 +2,7 @@
 
 Hey there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
 
-Please note that this project is released with a [Contributor Code of Conduct](https://github.com/srinidh-007/HackotberFest2021). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/srinidh-007/HackotberFest2021/blob/main/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 # Rules & Regulations 
 
