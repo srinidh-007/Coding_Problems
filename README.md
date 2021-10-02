@@ -34,12 +34,12 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 
 ***
 ## Rules To Contribute To This Repo
-
--   Use any language.
--   Don't spam it will be rejected immediately
--   Python, C, C++, Java, Docker, JavaScript, Node, Data Structure and Algorithms, HTML, CSS, WebDev, Android Projects are Encouraged
--   Anything valuable for Community
--   Please check for the file your contributing is already available or not if it is available contribute something new, duplicate content will be rejected immediately
+- <a href= "https://github.com/srinidh-007/HackotberFest2021/blob/main/CODE_OF_CONDUCT.md">
+    Code of Conduct
+    </a>
+- <a href= "https://github.com/srinidh-007/HackotberFest2021/blob/main/contribute.md">
+    Contribution Guidelines
+    </a>
 
 ## Steps For Contribution
 
