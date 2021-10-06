@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -7,27 +6,32 @@ of arr[] with sum equal to 'sum' otherwise
 returns false. Also, prints the result */
 int subArraySum(int arr[], int n, int sum)
 {
-    int curr_sum, i, j;
- 
-    // Pick a starting point
-    for (i = 0; i < n; i++) {
-        curr_sum = arr[i];
- 
-        // try all subarrays starting with 'i'
-        for (j = i + 1; j <= n; j++) {
-            if (curr_sum == sum) {
-                cout << "Sum found between indexes "
-                     << i << " and " << j - 1;
-                return 1;
-            }
-            if (curr_sum > sum || j == n)
-                break;
-            curr_sum = curr_sum + arr[j];
+    // create an empty map
+    unordered_map<int, int> map;
+    int curr_sum = 0;	//	maintaining the sum of elements so far
+    for (int i = 0; i < n; i++)
+    {
+        curr_sum = curr_sum + arr[i];
+        if (curr_sum == sum)
+        {
+            cout << "Sum found between indexes "
+                 << 0 << " and " << i << endl;
+            return 1;
         }
+        if (map.find(curr_sum - sum) != map.end())
+        {
+            cout << "Sum found between indexes "
+                 << map[curr_sum - sum] + 1
+                 << " and " << i << endl;
+            return 1;
+        }
+ 
+        map[curr_sum] = i;
     }
  
-    cout << "No subarray found";
-    return 0;
+    // If we reach here, then no subarray exists
+    cout << "No subarray with given sum exists";
+	return 0;
 }
  
 // Driver Code
@@ -39,4 +43,3 @@ int main()
     subArraySum(arr, n, sum);
     return 0;
 }
- 
