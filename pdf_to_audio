@@ -1,19 +1,19 @@
-from gtts import gTTS
-import os
-import PyPDF2
+from gtts import gTTs #import goggle text to speech
+import os 
+import PyPDF2 # imort pyPDF2 which will help us to extract text from pdf
 
-book=open('mybook.pdf','r',encoding='utf-8')
+book=open('mybook.pdf','r',encoding='utf-8') #opening pdf
 
 pdfReader=PyPDF2.PdfFileReader(book)
 pages=pdfReader.numPages
-print(pages)
+print(pages) # printing total number of pages 
 page1=pdfReader.getPage(0)
-mytext=page1.extractText()
-print(mytext)
+mytext=page1.extractText() #extracting  text from pdf
+print(mytext) 
 language ='en'
-output=gTTS(text=mytext,lang=language,slow=True)
+output=gTTS(text=mytext,lang=language,slow=True) #converting text to mp3 in english 
 print("doning")
-book.close()
-output.save("test.mp3")
-os.system("test.mp3")
+book.close() 
+output.save("test.mp3") #saving audio
+os.system("test.mp3") # playing audio
 print("done")
