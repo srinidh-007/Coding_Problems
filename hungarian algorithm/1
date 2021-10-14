@@ -1,0 +1,13 @@
+Matrix formulation
+In the matrix formulation, we are given a nonnegative n×n matrix, where the element in the i-th row and j-th column represents the cost of assigning the j-th job to the i-th worker. We have to find an assignment of the jobs to the workers, such that each job is assigned to one worker and each worker is assigned one job, such that the total cost of assignment is minimum.
+
+This can be expressed as permuting the rows and columns of a cost matrix C to minimize the trace of a matrix:
+
+{\displaystyle \min _{L,R}{\rm {Tr}}(LCR)}{\displaystyle \min _{L,R}{\rm {Tr}}(LCR)}
+
+where L and R are permutation matrices.
+
+If the goal is to find the assignment that yields the maximum cost, the problem can be solved by negating the cost matrix C.
+
+Bipartite graph formulation
+The algorithm is easier to describe if we formulate the problem using a bipartite graph. We have a complete bipartite graph {\displaystyle G=(S,T;E)}G=(S, T; E) with {\displaystyle n}n worker vertices ({\displaystyle S}S) and {\displaystyle n}n job vertices ({\displaystyle T}T), and each edge has a nonnegative cost {\displaystyle c(i,j)}c(i,j). We want to find a perfect matching with a minimum total cost
