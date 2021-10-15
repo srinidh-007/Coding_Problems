@@ -1,59 +1,93 @@
-// Transpose of a sparse matrix
-
 #include<iostream>
-#include<string>
 using namespace std;
+class transposeM{
+    int m1[20][20],m2[20][20],i,j,row,column,t;
+public:
+    void read(){
+        t=0;
+        cout<<"Enter the number of row: \n";
+        cin>>row;
+        cout<<"enter the number of column: \n";
+        cin>>column;
 
-int main() {
-    int row,column,size;
+        for(i=0;i<row;i++){
+            for(j=0;j<column;j++){
+                cin>>m1[i][j];
 
-    // input for number of rows and columns and number of non zero elements
-    cout<<"Enter the number of rows in the matrix: ";
-    cin>>row;
-    cout<<"Enter the number of columns in the matrix: ";
-    cin>>column;
-    cout<<"Enter the number of non zero elements in the matrix: ";
-    cin>>size;
+                if(m1[i][j]){
+                    t++;
+//                  cout<<"first t is:"<<t;
+                //if non zero
+                            m2[t][0]=i+1;
+                            m2[t][1]=j+1;
+                            m2[t][2]=m1[i][j];
 
-    // inputing the matrix in sparse form (triplet form)
-    if(size <= (row*column)){
-    int sparseMatrix[size][3];
-    for(int i=0 ; i<size ; i++){
-        cout<<"Enter the row index , column index and value of element "<<i+1<<endl;
-        cin>>sparseMatrix[i][0];
-        cin>>sparseMatrix[i][1];
-        cin>>sparseMatrix[i][2];
-    }
+                }
 
-    // Displaying your matrix
-    cout<<"Your sparse matrix is :\n";
-    for(int i=0 ; i<size ; i++){
-        cout<<sparseMatrix[i][0]<<" "<<sparseMatrix[i][1]<<" "<<sparseMatrix[i][2]<<endl;
-    }
 
-    // Finding the transpose
-    int transpose[size][3];
-    int k=0;
-    for(int i=0 ; i<column ; i++){
-        for(int j=0 ; j<size ; j++){
-            if(sparseMatrix[j][1] == i){
-                transpose[k][0] = sparseMatrix[j][1];
-                transpose[k][1] = sparseMatrix[j][0];
-                transpose[k][2] = sparseMatrix[j][2];
-                k++;
             }
+        }
+
+        m2[0][0]=row;
+        m2[0][1]=column;
+        m2[0][2]=t;
+    }
+
+    void displaysp(){
+cout<<"sparse matrix is: \n";
+        for(i=0;i<=t;i++){
+            for(j=0;j<3;j++){
+                cout<<m2[i][j]<<" ";
+            }
+            cout<<"\n";
         }
     }
 
-    // Displaying the transpose of the sparse matrix
-    cout<<"\n\nTranspose of sparse matrix is :\n";
-    for(int i=0 ; i<size ; i++){
-        cout<<transpose[i][0]<<" "<<transpose[i][1]<<" "<<transpose[i][2]<<endl;
+    void transpose(){
+        int transpose[20][3];
+
+                        transpose[0][0]=m2[0][0];
+                        transpose[0][1]=m2[0][1];
+                        transpose[0][2]=m2[0][2];
+        cout<<"Transpose is: \n";
+        int q=1;
+        for(i=1;i<=column;i++){
+            for(int p=1;p<=t;p++){
+                if(m2[p][1]==i){
+                    transpose[q][0]=m2[p][0];
+                    transpose[q][1]=m2[p][1];
+                    transpose[q][2]=m2[p][2];
+                    q++;
+
+                }
+            }
+        }
+
+        for(i=0;i<=column;i++){
+            for(j=0;j<3;j++){
+                cout<<transpose[i][j]<<" ";
+            }
+            cout<<"\n";
+        }
+
     }
+    void display(){
+        for(i=0;i<row;i++){
+                for(j=0;j<column;j++){
+                    cout<<m1[i][j]<<" ";
+
+
+                }
+                cout<<"\n";
+            }
+
     }
-    else{
-        cout<<"Error\n";
-    }
-    
+};
+int main(int argc,char ** argv){
+    transposeM obj;
+    obj.read();
+    obj.display();
+    obj.displaysp();
+    obj.transpose();
     return 0;
 }

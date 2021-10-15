@@ -1,23 +1,21 @@
-'''
-Sorting: Selection sort using recursion
-'''
-
-
-def selection(l, n):
-    if n == len(l):
-        return l
-    else:
-        s = max(l)
-        f = len(l)-1
-        for i in range(n, len(l)):
-            if l[i] < s:
-                s = l[i]
-                f = i
-        l[n], l[f] = l[f], l[n]
-        return selection(l, n+1)
-
-
-f = int(input())
-l = [int(input()) for i in range(f)]
-n = 0
-print(selection(l, n))
+import sys
+A = [64, 25, 12, 22, 11]
+ 
+# Traverse through all array elements
+for i in range(len(A)):
+     
+    # Find the minimum element in remaining
+    # unsorted array
+    min_idx = i
+    for j in range(i+1, len(A)):
+        if A[min_idx] > A[j]:
+            min_idx = j
+             
+    # Swap the found minimum element with
+    # the first element       
+    A[i], A[min_idx] = A[min_idx], A[i]
+ 
+# Driver code to test above
+print ("Sorted array")
+for i in range(len(A)):
+    print("%d" %A[i])

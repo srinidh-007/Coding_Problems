@@ -24,6 +24,10 @@ int main() {
  
     // The result is 00000100
     cout<<"b >> 1 "<<"= " << (b >> 1 )<<endl;
+
+    cout<<"a % b "<<"= " << (a % b )<<endl;
+
+    cout<<"a / b "<<"= " << (a / b )<<endl;
  
     return 0;
 }
